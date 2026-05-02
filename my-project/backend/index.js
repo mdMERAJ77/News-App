@@ -9,7 +9,7 @@ const app = express();
 
 // ✅ CORS properly configure karo
 app.use(cors({
-    origin: ['https://newsmeraj.netlify.app', 'http://localhost:5173', 'http://localhost:3000'],
+    origin: ['https://news-meraj.onrender.com','https://newsmeraj.netlify.app', 'http://localhost:5173', 'http://localhost:3000'],
     credentials: true
 }));
 
