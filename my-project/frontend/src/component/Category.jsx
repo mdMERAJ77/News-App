@@ -16,15 +16,15 @@ const Category = ({ className }) => {
 
     return (
 
-        <div className={`${className}`}>
+        <div className={`${className} py-4`}>
             <Wrapper>
-                <div className={`max-w-full w-fit m-auto flex overflow-x-auto px-4 scrollbar-none gap-5`}>
+                <div className="flex w-full flex-nowrap overflow-x-auto gap-3 px-4 md:px-0 scrollbar-none">
                     {categories.map((category) => {
                         return (
                             <button
                                 onClick={handleClick} key={category}
                                 value={category}
-                                className="btn btn-primary"
+                                className="btn btn-primary min-w-max"
                             >{category}</button>
                         )
                     })}

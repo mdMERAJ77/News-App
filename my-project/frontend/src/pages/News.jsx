@@ -19,7 +19,7 @@ const News = ({ className }) => {
 
     return (
         <Wrapper>
-            <div className={`grid grid-cols-4 gap-6 ${className}`}>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
                 {news.map((newsDetails, index) => {
                     if (!newsDetails.urlToImage) return null;
                     return (
@@ -35,18 +35,18 @@ const News = ({ className }) => {
 const NewsCard = ({ details }) => {
 
     return (
-        <div className="card bg-base-200 shadow-sm">
+        <div className="card bg-base-200 shadow-sm hover:shadow-lg transition-shadow duration-200">
             <figure>
                 <img
-                    className='w-full aspect-video object-contain'
+                    className='w-full aspect-video object-cover'
                     src={details?.urlToImage}
-                    alt="Shoes" />
+                    alt={details?.title || "News image"} />
             </figure>
             <div className="card-body">
-                <h2 className="card-title line-clamp-2">{details?.title}</h2>
-                <p className='line-clamp-3'>{details.description}</p>
+                <h2 className="card-title text-base sm:text-lg line-clamp-2">{details?.title}</h2>
+                <p className='text-sm sm:text-base line-clamp-3'>{details.description}</p>
                 <div className="card-actions justify-end mt-4">
-                    <button onClick={() => window.open(details.url)} className=" badge-outline btn">Read More</button>
+                    <button onClick={() => window.open(details.url)} className="badge-outline btn btn-sm">Read More</button>
                 </div>
             </div>
         </div>
