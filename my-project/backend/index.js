@@ -10,7 +10,7 @@ app.get("/", (req, res) => res.send("Backend is running!"));
 
 // ✅ CORS properly configure karo
 app.use(cors({
-    origin: ['https://news-app-backend.onrender.com','https://newsmeraj.netlify.app', 'https://69f6c202d9bdae9114e46378--newsmeraj.netlify.app', 'http://localhost:5173', 'http://localhost:3000'],
+    origin: ['https://news-app-backend.onrender.com','https://newsmeraj.netlify.app', 'https://69f6c202d9bdae9114e46378--newsmeraj.netlify.app', 'https://69f6c7fb85e009d228cca817--newsmeraj.netlify.app', 'http://localhost:5173', 'http://localhost:3000'],
     credentials: true
 }));
 
